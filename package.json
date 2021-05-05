@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "develop": "nodemon server.js",
-    "unit-tests": "mocha test/unit.js --reporter mocha-jenkins-reporter --reporter-options test/test-results.xml",
+    "unit-tests": "mocha test/unit.js --reporter mocha-junit-reporter --reporter-options test/test-results.xml",
     "integration-tests": "mocha --timeout 40000 --exit test/integration.js",
     "mocha": "npm run mocha"
   },
@@ -25,6 +25,6 @@
     "request": "^2.88.0",
     "request-promise": "^4.2.4",
     "sinon": "^7.5.0",
-    "mocha-jenkins-reporter": "0.4.5"
+    "mocha-junit-reporter": "2.0.0"
   }
 }
