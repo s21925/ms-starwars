@@ -1,4 +1,4 @@
-{
+k{
   "name": "ms-starwars",
   "version": "1.0.0",
   "description": "",
@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "develop": "nodemon server.js",
-    "unit-tests": "mocha test/unit.js --reporter mocha-junit-reporter --reporter-options ./test-results.xml",
+    "unit-tests": "mocha test/unit.js --reporter mocha-jenkins-reporter --reporter-options ./test-results.xml",
     "integration-tests": "mocha --timeout 40000 --exit test/integration.js",
     "mocha": "npm run mocha"
   },
