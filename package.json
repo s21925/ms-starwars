@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "develop": "nodemon server.js",
-    "unit-tests": "mocha test/unit.js --reporter mocha-jenkins-reporter",
+    "unit-tests": "mocha test/unit.js --reporter mocha-jenkins-reporter --reporter-options ./test-results.xml",
     "integration-tests": "mocha --timeout 40000 --exit test/integration.js",
     "mocha": "npm run mocha"
   },
