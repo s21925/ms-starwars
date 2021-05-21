@@ -46,7 +46,7 @@ jobs:
         uses: dorny/test-reporter@v1
         if: success() || failure()          # run this step even if previous step failed
         with:
-          name: mocha Tests integration    # Name of the check run which will be created
+          name: mocha Tests integration     # Name of the check run which will be created
           path: ./int-test-results.json     # Path to test results
           reporter: mocha-json              # Format of test result
       
