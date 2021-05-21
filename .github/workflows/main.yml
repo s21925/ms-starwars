@@ -61,8 +61,8 @@ jobs:
         # uses: SonarSource/sonarcloud-github-action@de2e56b42aa84d0b1c5b622644ac17e505c9a049
         uses: SonarSource/sonarcloud-github-action@v1.6
         env:
-          GITHUB_TOKEN: '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'
-          SONAR_TOKEN: '0e51e37260136c94635ea9f3daeca0866be07404'
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
           # Additional arguments to the sonarcloud scanner
           args: >
