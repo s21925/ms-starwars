@@ -33,6 +33,11 @@ jobs:
         
       - name: integration-test
         run : npm run integration-tests
+      - name: Upload Integration Test results
+        uses: actions/upload-artifact@master
+        with:
+           name: int-report
+           path: ${{github.workspace}}/reports
       
       - name: Test Report unit
         uses: dorny/test-reporter@v1
@@ -47,7 +52,7 @@ jobs:
         if: success() || failure()          # run this step even if previous step failed
         with:
           name: mocha Tests integration     # Name of the check run which will be created
-          path: ./int-test-results.json     # Path to test results
+          path: ./results.json     # Path to test results
           reporter: mocha-json              # Format of test result
       
       - name: Depcheck
