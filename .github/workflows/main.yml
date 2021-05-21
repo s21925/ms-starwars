@@ -28,6 +28,12 @@ jobs:
       - name: Install 🔧
         run: npm install
       
+      - name: unit-test
+        run : npm run unit-tests
+        
+      - name: unit-test
+        run : npm run integration-tests
+      
       - name: Depcheck
         uses: dependency-check/Dependency-Check_Action@main
         id: Depcheck
