@@ -40,7 +40,7 @@ jobs:
         with:
           name: mocha Tests            # Name of the check run which will be created
           path: ./test-results.json    # Path to test results
-          reporter: mocha-jeson        # Format of test results
+          reporter: mocha-json        # Format of test results
       
       - name: Depcheck
         uses: dependency-check/Dependency-Check_Action@main
