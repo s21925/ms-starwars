@@ -81,8 +81,8 @@ jobs:
         uses: docker/login-action@v1
         with:
           registry: wisit.jfrog.io
-          username: ${{ secrets.JFROG_USERNAME }}
-          password: ${{ secrets.JFROG_PAT }}
+          username: 'l.halicki@gmail.com' #${{ secrets.JFROG_USERNAME }}
+          password: 'zaq12WSX' #${{ secrets.JFROG_PAT }}
       
       - name: Build and push 🐳
         id: docker_build
