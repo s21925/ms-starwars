@@ -31,7 +31,7 @@ jobs:
       - name: unit-test
         run : npm run unit-tests
         
-      - name: unit-test
+      - name: integration-test
         run : npm run integration-tests
       
       - name: Test Report unit
