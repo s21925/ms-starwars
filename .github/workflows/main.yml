@@ -42,6 +42,14 @@ jobs:
           path: ./test-results.json    # Path to test results
           reporter: mocha-json        # Format of test results
       
+      - name: Test Report integration
+        uses: dorny/test-reporter@v1
+        if: success() || failure()    # run this step even if previous step failed
+        with:
+          name: mocha Tests            # Name of the check run which will be created
+          path: ./int-test-results.json    # Path to test results
+          reporter: mocha-json        # Format of test result
+      
       - name: Depcheck
         uses: dependency-check/Dependency-Check_Action@main
         id: Depcheck
