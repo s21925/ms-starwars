@@ -34,3 +34,23 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+      # fraza install  
+      - name: Install
+        run: npm install
+      # fraza unit
+      - name: unit-test
+        run : npm run unit-tests
+      # fraza integration
+      - name: integration-test
+        run : npm run integration-tests
+      # fraza raport
+      - name: Test Report unit
+        uses: dorny/test-reporter@v1
+        if: success() || failure()
+        with:
+        name: mocha Tests unit
+        path: ./test-results.json
+        reporter: mocha-json
+        
+        
+        
